@@ -1,0 +1,156 @@
+:root {
+    --main-color: #007BFF;
+    --button-color-green: #28A745;
+    --button-color-red: #DC3545;
+    --button-color-blue: #007BFF;
+    --button-color-blue-hover: #0056b3;
+    --button-color-cyan: #17A2B8;
+    --button-color-cyan-hover: #138496;
+    --button-color-green: #28A745;
+    --button-color-green-hover: #1e8436;
+}
+
+.todo-container {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translate3d(0, 0, 0);
+    transition: box-shadow 0.2s ease;
+
+}
+
+.todo-container.red {
+    background-color: var(--button-color-red);
+    color: #fff;
+}
+
+.todo-container.green {
+    background-color: var(--button-color-green);
+}
+
+.todo-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.add-button {
+    padding: 8px 12px;
+    border: none;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-button:hover {
+    background-color: var(--button-color-blue-hover);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.todo-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.todo-list.overflowing {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.todo-item.editing {
+    box-shadow: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative;
+}
+
+.task {
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    white-space: nowrap;
+
+}
+
+.task-wrapper {
+    flex: 1;
+    max-width: 80%;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.completed-task {
+    flex: 1;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #333;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.edit-button,
+.delete-button,
+.save-button {
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 6px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: white;
+    color: #000000;
+    /* Set icon color */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.edit-button {
+    right: 40px;
+}
+
+.delete-button {
+    right: 0px;
+}
+
+.save-button {
+    right: 0px;
+}
+
+.edit-button:hover,
+.delete-button:hover,
+.save-button:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.todo-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
